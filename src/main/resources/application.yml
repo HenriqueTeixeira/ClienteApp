@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME}
+
+  rabbitmq:
+    addresses: ${SPRING_RABBITMQ_ADDRESSES}

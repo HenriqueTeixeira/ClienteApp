@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  clienteapp:
+    build: .
+    container_name: clienteapp
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_APPLICATION_NAME: ClienteApp
+      SPRING_RABBITMQ_ADDRESSES: amqps://<usuario>:<senha>@<host>.cloudamqp.com/<vhost>
+    networks:
+      - clienteapp-network
+
+networks:
+  clienteapp-network:
+    driver: bridge
